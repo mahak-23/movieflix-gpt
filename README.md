@@ -1,6 +1,6 @@
 #
 
-# 🎬 MoviFlix (Netflix Clone) — Movie Streaming App with GPT Search
+# 🎬 [MoviFlix (Netflix Clone) — Movie Streaming App with GPT Search](https://movieflix-fe.netlify.app/)
 
 This is a **Netflix-inspired video streaming platform** built with modern frontend technologies like **React**, **Redux Toolkit**, **Tailwind CSS**, and **Material UI**. It features movie browsing, YouTube-based video playback, AI-powered movie search via GPT, and smooth shimmer loading for better UX.
 
