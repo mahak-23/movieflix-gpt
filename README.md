@@ -127,7 +127,7 @@ You can change your DNS from your system settings or router settings.
 
 ## 📽️ Demo Video
 
-[🎬 Watch Demo](./ScreenShots_Moviflix-video.webm)
+[🎬 Watch Demo](./ScreenShots/_Moviflix-video.webm)
 
 <video src="./ScreenShots_Moviflix-video.webm" controls width="100%" style="max-width: 720px;">
   Your browser does not support the video tag.
