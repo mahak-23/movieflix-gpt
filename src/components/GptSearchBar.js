@@ -72,25 +72,25 @@ const GptSearchBar = () => {
     setLoadingBtn(true);
 
     try {
-      // if (user !== "moviflix_test@gmail.com") {
-      //   alert(
-      //     "GPT is restricted to moviflix_test@gmail.com user only. Using direct search instead."
-      //   );
-      //   await fallbackToTMDBSearch();
-      //   return;
-      // }
+      if (user !== "moviflix_test@gmail.com") {
+        alert(
+          "GPT is restricted to moviflix_test@gmail.com user only. Using direct search instead."
+        );
+        await fallbackToTMDBSearch();
+        return;
+      }
 
       const gptQueryPrompt =
         "Act as a Movie Recommendation system and suggest some movies for the query: " +
         inputValue +
         ". Only give me names of 5 movies, comma separated. Example Result: Hero, Barbie, Phir Hera Pheri";
 
-      // const gptResults = await openai.chat.completions.create({
-      //   messages: [{ role: "user", content: gptQueryPrompt }],
-      //   model: "gpt-3.5-turbo",
-      // });
+      const gptResults = await openai.chat.completions.create({
+        messages: [{ role: "user", content: gptQueryPrompt }],
+        model: "gpt-3.5-turbo",
+      });
 
-      const gptResponseText = "Stree, Tumbbad, Bhool Bhulaiyaa, Ek Thi Daayan, Ra.One";
+      const gptResponseText = gptResults.choices?.[0]?.message?.content;
       if (!gptResponseText) {
         console.error("GPT returned no content. Falling back to TMDB.");
         await fallbackToTMDBSearch();
